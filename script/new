@@ -1,0 +1,19 @@
+#! /usr/bin/env ruby
+
+require 'stringex'
+require 'time'
+
+abort "You need to specify the saying, silly." if ARGV.empty?
+
+title = ARGV.join(' ')
+puts title
+
+path = "_posts/#{Time.new.strftime('%Y-%m-%d')}-#{title.to_url}.md"
+File.open(path, "wb") do |f|
+  f.puts "---"
+  f.puts "layout: saying"
+  f.puts "title: #{title}"
+  f.puts "date: #{Time.new.xmlschema}"
+  f.puts "---"
+end
+puts path

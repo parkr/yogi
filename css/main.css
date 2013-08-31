@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Bad Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bad Script Regular'), local('BadScript-Regular'), url(http://themes.googleusercontent.com/static/fonts/badscript/v2/rL_b2ND61EQmMOJ8CRr1fr3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+html, body {
+  width: 100%;
+  background-color: #EBE3D3;
+  font-size: 1.2em;
+  line-height: 1.4;
+  font-family: Arial, sans-serif;
+}
+
+.blurb {
+  width: 64%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.content {
+  width: 64%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.saying {
+  width: 64%;
+  margin: 1em auto;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Bad Script', Arial;
+}
+
+.saying:before {
+  content: '~ "'
+}
+
+.saying:after {
+  content: '" ~'
+}
