@@ -1,1 +1,16 @@
 permalink: /:title/
+
+# prose configuration
+metadata:
+  _posts:
+    - name: "layout"
+      field:
+        element: hidden
+        value: saying
+    - name: "published"
+      field:
+        element: hidden
+        value: true
+    - name: "title"
+      field:
+        element: text
