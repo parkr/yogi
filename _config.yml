@@ -14,3 +14,4 @@ metadata:
     - name: "title"
       field:
         element: text
+        value: ""
