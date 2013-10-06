@@ -16,4 +16,8 @@ File.open(path, "wb") do |f|
   f.puts "date: #{Time.new.xmlschema}"
   f.puts "---"
 end
-puts path
+
+`git add #{path}`
+`git commit -m "Add '#{title}'"`
+
+puts "Added '#{title}'."
