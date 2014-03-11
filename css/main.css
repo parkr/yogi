@@ -7,7 +7,7 @@
 
 html, body {
   width: 100%;
-  background-color: #EBE3D3;
+  background-color: #fffde0;
   font-size: 1.2em;
   line-height: 1.4;
   font-family: Arial, sans-serif;
@@ -20,23 +20,38 @@ html, body {
 }
 
 .content {
-  width: 64%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
 .saying {
-  width: 64%;
-  margin: 1em auto;
   text-align: center;
   font-size: 1.5em;
   font-family: 'Bad Script', Arial;
 }
 
 .saying:before {
-  content: '~ "'
+  content: '"'
+}
+.saying:after {
+  content: '"'
 }
 
-.saying:after {
-  content: '" ~'
+.massive {
+  font-size: 3em;
+}
+
+/* iPad, kind of */
+@media all and (min-width: 700px) {
+  .saying {
+    width: 80%;
+    margin: 1em auto;
+  }
+  .saying:before {
+    content: '~ "'
+  }
+  .saying:after {
+    content: '" ~'
+  }
 }
