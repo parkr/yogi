@@ -4,3 +4,26 @@ title: Yogi Tea Sayings
 ---
 
 <article class="saying massive">{{ site.posts.first.title }}</article>
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    var pickRandom = function(list){
+      return list[Math.floor(Math.random() * list.length)];
+    };
+    var placeQuoteInHTML = function(quotes){
+      document.getElementsByTagName("article")[0].innerText = pickRandom(quotes).title;
+    };
+    var loadInQuotes = function(){
+      var request = new XMLHttpRequest();
+      request.open('GET', "archive.json", true);
+      request.send();
+      request.onreadystatechange = function() {
+        if (this.status == 200 && this.readyState == 4) {
+          placeQuoteInHTML(JSON.parse(this.responseText));
+        }
+      };
+    };
+    setInterval(loadInQuotes, 10000);
+  })();
+
+</script>
